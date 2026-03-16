@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { HiArrowLongRight } from 'react-icons/hi2';
 import { FaGithub } from 'react-icons/fa';
 
 const projects = [
@@ -9,6 +10,7 @@ const projects = [
     stack: ['Java', 'Spring Boot', 'MySQL', 'React'],
     github:
       'https://github.com/search?q=user%3Amadhurasharan+employee-task-tracker&type=repositories',
+    demo: '#',
   },
   {
     title: 'Phishing Detection using Email Parsing & ML',
@@ -17,6 +19,7 @@ const projects = [
     stack: ['Python', 'Machine Learning', 'Random Forest', 'Email Parsing'],
     github:
       'https://github.com/search?q=user%3Amadhurasharan+phishing+detection+email+parsing&type=repositories',
+    demo: '#',
   },
   {
     title: 'Weather App',
@@ -25,6 +28,7 @@ const projects = [
     stack: ['React', 'API Integration', 'CSS', 'JavaScript'],
     github:
       'https://github.com/search?q=user%3Amadhurasharan+weather+app&type=repositories',
+    demo: '#',
   },
 ];
 
@@ -75,12 +79,24 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <div className="flex">
+            <div className="mt-auto flex gap-3">
+              <a
+                href={project.demo}
+                className="secondary-btn flex-1 px-4 py-2.5"
+                aria-disabled={project.demo === '#'}
+                onClick={(event) => {
+                  if (project.demo === '#') {
+                    event.preventDefault();
+                  }
+                }}
+              >
+                Live Demo
+              </a>
               <a
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="secondary-btn w-full gap-2 px-4 py-2.5"
+                className="secondary-btn flex-1 gap-2 px-4 py-2.5"
               >
                 <FaGithub size={16} />
                 GitHub
@@ -89,6 +105,24 @@ export default function Projects() {
           </motion.article>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.4, delay: 0.1 }}
+        className="mt-12 flex justify-center"
+      >
+        <a
+          href="https://github.com/madhurasharan"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:gap-3 hover:text-brand-accent"
+        >
+          Explore More Projects
+          <HiArrowLongRight size={18} />
+        </a>
+      </motion.div>
     </section>
   );
 }
