@@ -3,7 +3,7 @@ import { HiBriefcase } from 'react-icons/hi2';
 
 export default function Experience() {
   return (
-    <section id="experience" className="section-shell py-24">
+    <section id="experience" className="section-shell py-20 md:py-28">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ export default function Experience() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="glass-card relative overflow-hidden p-8 sm:p-10"
+        className="glass-card relative overflow-hidden p-6 sm:p-8 md:p-10"
       >
         <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-brand-primary/10 blur-3xl" />
         <HiBriefcase className="mb-5 text-3xl text-brand-accent" />
@@ -30,7 +30,7 @@ export default function Experience() {
             <h3 className="text-2xl font-semibold text-white">Web Development Intern</h3>
             <p className="mt-2 text-base text-slate-300">Sanskar Foundation (NGO)</p>
           </div>
-          <span className="rounded-full border border-brand-primary/30 bg-brand-primary/10 px-4 py-2 text-sm font-medium text-brand-primary">
+          <span className="self-start rounded-full border border-brand-primary/30 bg-brand-primary/10 px-4 py-2 text-sm font-medium text-brand-primary">
             2025 - Present
           </span>
         </div>

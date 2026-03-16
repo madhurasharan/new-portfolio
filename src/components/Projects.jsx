@@ -34,7 +34,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-shell py-24">
+    <section id="projects" className="section-shell py-20 md:py-28">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function Projects() {
         </p>
       </motion.div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
         {projects.map((project, index) => (
           <motion.article
             key={project.title}
@@ -60,7 +60,7 @@ export default function Projects() {
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.45, delay: index * 0.08 }}
             whileHover={{ y: -4 }}
-            className="group glass-card flex h-full flex-col p-7 transition duration-300 hover:border-brand-primary/40"
+            className="group glass-card flex h-full flex-col p-6 transition duration-300 hover:border-brand-primary/40 md:p-7"
           >
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 text-xl text-brand-primary">
               0{index + 1}
@@ -79,10 +79,10 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <div className="mt-auto flex gap-3">
+            <div className="mt-auto flex flex-wrap gap-3">
               <a
                 href={project.demo}
-                className="secondary-btn flex-1 px-4 py-2.5"
+                className="secondary-btn w-full px-4 py-2.5 sm:flex-1"
                 aria-disabled={project.demo === '#'}
                 onClick={(event) => {
                   if (project.demo === '#') {
@@ -96,7 +96,7 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="secondary-btn flex-1 gap-2 px-4 py-2.5"
+                className="secondary-btn w-full px-4 py-2.5 sm:flex-1"
               >
                 <FaGithub size={16} />
                 GitHub

@@ -19,7 +19,7 @@ const statCards = [
 
 export default function GitHubStats() {
   return (
-    <section id="github-stats" className="section-shell py-24">
+    <section id="github-stats" className="section-shell py-20 md:py-28">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function GitHubStats() {
             <p className="mb-4 px-2 text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">
               {card.title}
             </p>
-            <img src={card.src} alt={card.title} className="w-full rounded-2xl" />
+            <img src={card.src} alt={card.title} className="h-auto w-full rounded-2xl" />
           </motion.article>
         ))}
       </div>

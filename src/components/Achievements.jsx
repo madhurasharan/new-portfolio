@@ -8,7 +8,7 @@ const achievements = [
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="section-shell py-24">
+    <section id="achievements" className="section-shell py-20 md:py-28">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ export default function Achievements() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="glass-card flex items-start gap-5 p-8"
+            className="glass-card flex flex-col gap-5 p-6 sm:flex-row sm:items-start md:p-8"
           >
             <div className="rounded-2xl bg-brand-accent/15 p-4 text-brand-accent">
               <HiTrophy size={24} />

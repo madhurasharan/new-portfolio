@@ -32,7 +32,7 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-shell py-24">
+    <section id="contact" className="section-shell py-20 md:py-28">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export default function Contact() {
           software, web development, and learning.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-6">
           {socialLinks.map(({ icon: Icon, label, href }) => (
             <a
               key={label}
@@ -58,7 +58,7 @@ export default function Contact() {
               rel="noreferrer"
               aria-label={label}
               title={label}
-              className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-slate-200 transition duration-300 hover:-translate-y-1 hover:border-brand-primary hover:text-brand-accent"
+              className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-slate-200 transition duration-300 hover:-translate-y-1 hover:border-brand-primary hover:text-brand-accent md:h-16 md:w-16"
             >
               <Icon size={24} />
             </a>

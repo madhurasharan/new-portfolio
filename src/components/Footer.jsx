@@ -14,10 +14,10 @@ export default function Footer() {
     <footer className="border-t border-white/10 py-8">
       <div className="section-shell flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <p className="text-sm text-slate-400">
-          © {new Date().getFullYear()} Madhura S N. Crafted with React, Tailwind CSS, and
-          Framer Motion.
+          &copy; {new Date().getFullYear()} Madhura S N. Crafted with React, Tailwind CSS,
+          and Framer Motion.
         </p>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {socials.map(({ icon: Icon, href, label }) => (
             <a
               key={label}

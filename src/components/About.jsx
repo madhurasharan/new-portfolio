@@ -41,13 +41,13 @@ export default function About() {
         </p>
       </motion.div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         <motion.article
           variants={reveal}
           initial="hidden"
           whileInView="whileInView"
           viewport={{ once: true, amount: 0.2 }}
-          className="glass-card p-8"
+          className="glass-card p-6 md:p-8"
         >
           <HiUser className="mb-5 text-3xl text-brand-primary" />
           <h3 className="mb-4 text-xl font-semibold text-white">Short Bio</h3>
@@ -64,7 +64,7 @@ export default function About() {
           whileInView="whileInView"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ delay: 0.1 }}
-          className="glass-card p-8"
+          className="glass-card p-6 md:p-8"
         >
           <HiAcademicCap className="mb-5 text-3xl text-brand-accent" />
           <h3 className="mb-4 text-xl font-semibold text-white">Education</h3>
@@ -81,7 +81,7 @@ export default function About() {
           whileInView="whileInView"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ delay: 0.2 }}
-          className="glass-card p-8"
+          className="glass-card p-6 md:p-8"
         >
           <HiCpuChip className="mb-5 text-3xl text-brand-primary" />
           <h3 className="mb-4 text-xl font-semibold text-white">Skills</h3>

@@ -26,8 +26,8 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <div className="hidden items-center space-x-8 lg:flex">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-8">
+        <div className="hidden items-center gap-6 md:flex lg:gap-8">
           {navItems.map((item) => (
             <a key={item.href} href={item.href} className="nav-link">
               {item.label}
@@ -35,7 +35,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-4 md:flex">
           {socials.map(({ icon: Icon, href, label }) => (
             <a
               key={label}
@@ -50,7 +50,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="lg:hidden">
+        <div className="md:hidden">
           <button
             type="button"
             aria-label="Toggle navigation"
@@ -63,8 +63,8 @@ export default function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-slate-950/95 lg:hidden">
-          <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-6">
+        <div className="border-t border-white/10 bg-slate-950/95 md:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-6 md:px-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -75,7 +75,7 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex flex-wrap justify-center gap-4 pt-2">
               {socials.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
