@@ -1,16 +1,19 @@
 import { motion } from 'framer-motion';
 import { HiAcademicCap, HiCpuChip, HiUser } from 'react-icons/hi2';
 
-const skills = [
-  'Java',
-  'MySQL',
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Data Structures',
-  'DBMS',
-  'Operating Systems',
+const skillGroups = [
+  {
+    title: 'Programming Languages',
+    items: ['Java', 'JavaScript'],
+  },
+  {
+    title: 'Web Development',
+    items: ['HTML', 'CSS', 'React'],
+  },
+  {
+    title: 'Core Computer Science',
+    items: ['Data Structures', 'DBMS', 'Operating Systems'],
+  },
 ];
 
 const reveal = {
@@ -50,12 +53,17 @@ export default function About() {
           className="glass-card p-6 md:p-8"
         >
           <HiUser className="mb-5 text-3xl text-brand-primary" />
-          <h3 className="mb-4 text-xl font-semibold text-white">Short Bio</h3>
-          <p className="text-sm leading-7 text-slate-300">
-            I enjoy building dependable software systems with strong backend logic and a
-            smooth user experience. My work blends Java fundamentals, modern React UIs,
-            and a deep interest in database-driven applications.
-          </p>
+          <h3 className="mb-4 text-xl font-semibold text-white">Who am I?</h3>
+          <div className="space-y-4 text-sm leading-7 text-slate-300">
+            <p>
+              I&apos;m a final-year Computer Science student passionate about building
+              reliable web applications and solving real-world problems through code.
+            </p>
+            <p>
+              I enjoy working on backend-driven systems, designing clean APIs, and
+              creating web applications that are both functional and user-friendly.
+            </p>
+          </div>
         </motion.article>
 
         <motion.article
@@ -71,7 +79,7 @@ export default function About() {
           <div className="space-y-3 text-sm text-slate-300">
             <p className="font-semibold text-white">B.E Computer Science</p>
             <p>Acharya Institute of Technology</p>
-            <p>CGPA: 8.9</p>
+            <p>CGPA: 8.9 / 10</p>
           </div>
         </motion.article>
 
@@ -85,14 +93,23 @@ export default function About() {
         >
           <HiCpuChip className="mb-5 text-3xl text-brand-primary" />
           <h3 className="mb-4 text-xl font-semibold text-white">Skills</h3>
-          <div className="flex flex-wrap gap-3">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200"
-              >
-                {skill}
-              </span>
+          <div className="space-y-5">
+            {skillGroups.map((group) => (
+              <div key={group.title}>
+                <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
+                  {group.title}
+                </h4>
+                <div className="flex flex-wrap gap-3">
+                  {group.items.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </motion.article>

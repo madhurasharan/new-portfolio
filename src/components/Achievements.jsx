@@ -37,8 +37,7 @@ export default function Achievements() {
             <div>
               <h3 className="text-xl font-semibold text-white">{achievement}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                A milestone that reflects practical problem-solving, strong fundamentals,
-                and the drive to keep improving through real-world challenges.
+                
               </p>
             </div>
           </motion.article>

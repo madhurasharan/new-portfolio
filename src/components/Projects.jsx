@@ -7,9 +7,9 @@ const projects = [
     title: 'Employee Task Tracker',
     description:
       'A full stack task management application featuring REST APIs for CRUD operations, MySQL persistence, and a React frontend for tracking work efficiently.',
-    stack: ['Java', 'Spring Boot', 'MySQL', 'React'],
+    stack: ['MySQL', 'Node.js', 'React', 'JS'],
     github:
-      'https://github.com/search?q=user%3Amadhurasharan+employee-task-tracker&type=repositories',
+      'https://github.com/madhurasharan/Employ-Task-Tracker',
     demo: '#',
   },
   {
@@ -18,7 +18,7 @@ const projects = [
       'An email phishing detection system built with intelligent parsing and a Random Forest classifier that achieved 95% accuracy.',
     stack: ['Python', 'Machine Learning', 'Random Forest', 'Email Parsing'],
     github:
-      'https://github.com/search?q=user%3Amadhurasharan+phishing+detection+email+parsing&type=repositories',
+      'https://github.com/madhurasharan/-Phishing-Detection-Using-Email-Parsing-and-Machine-Learning',
     demo: '#',
   },
   {
@@ -27,8 +27,8 @@ const projects = [
       'A responsive React weather application using the OpenWeatherMap API with fast city search and a clean UI for real-time weather updates.',
     stack: ['React', 'API Integration', 'CSS', 'JavaScript'],
     github:
-      'https://github.com/search?q=user%3Amadhurasharan+weather+app&type=repositories',
-    demo: '#',
+      'https://github.com/madhurasharan/weather-app',
+    demo: 'https://weather-app-lemon-nine-78.vercel.app/',
   },
 ];
 
