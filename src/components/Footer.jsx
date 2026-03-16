@@ -1,8 +1,11 @@
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 const socials = [
-  { icon: FaGithub, href: 'https://github.com/', label: 'GitHub' },
-  { icon: FaLinkedin, href: 'https://linkedin.com/', label: 'LinkedIn' },
+  { icon: FaGithub, href: 'https://github.com/madhurasharan', label: 'GitHub' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/madhurasharan/', label: 'LinkedIn' },
+  { icon: FaMedium, href: 'https://madhurasharan66.medium.com/', label: 'Medium' },
+  { icon: SiLeetcode, href: 'https://leetcode.com/u/madhurasharan66/', label: 'LeetCode' },
   { icon: FaEnvelope, href: 'mailto:mail.madhurasn@gmail.com', label: 'Email' },
 ];
 

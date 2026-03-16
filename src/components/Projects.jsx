@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { HiArrowTopRightOnSquare } from 'react-icons/hi2';
 import { FaGithub } from 'react-icons/fa';
 
 const projects = [
@@ -8,24 +7,24 @@ const projects = [
     description:
       'A full stack task management application featuring REST APIs for CRUD operations, MySQL persistence, and a React frontend for tracking work efficiently.',
     stack: ['Java', 'Spring Boot', 'MySQL', 'React'],
-    github: 'https://github.com/',
-    demo: 'https://example.com/',
+    github:
+      'https://github.com/search?q=user%3Amadhurasharan+employee-task-tracker&type=repositories',
   },
   {
     title: 'Phishing Detection using Email Parsing & ML',
     description:
       'An email phishing detection system built with intelligent parsing and a Random Forest classifier that achieved 95% accuracy.',
     stack: ['Python', 'Machine Learning', 'Random Forest', 'Email Parsing'],
-    github: 'https://github.com/',
-    demo: 'https://example.com/',
+    github:
+      'https://github.com/search?q=user%3Amadhurasharan+phishing+detection+email+parsing&type=repositories',
   },
   {
     title: 'Weather App',
     description:
       'A responsive React weather application using the OpenWeatherMap API with fast city search and a clean UI for real-time weather updates.',
     stack: ['React', 'API Integration', 'CSS', 'JavaScript'],
-    github: 'https://github.com/',
-    demo: 'https://example.com/',
+    github:
+      'https://github.com/search?q=user%3Amadhurasharan+weather+app&type=repositories',
   },
 ];
 
@@ -41,10 +40,10 @@ export default function Projects() {
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-brand-primary">
           Projects
         </p>
-        <h2 className="section-title">Selected work that reflects how I build.</h2>
+        <h2 className="section-title">Selected projects.</h2>
         <p className="section-subtitle">
-          These projects combine backend architecture, clean APIs, practical interfaces,
-          and a strong focus on usability.
+          A few projects that reflect my interest in full stack development, machine
+          learning, and practical product building.
         </p>
       </motion.div>
 
@@ -55,9 +54,9 @@ export default function Projects() {
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.6, delay: index * 0.12 }}
-            whileHover={{ y: -8 }}
-            className="group glass-card flex h-full flex-col p-7 transition duration-300 hover:border-brand-primary/50 hover:bg-white/[0.08]"
+            transition={{ duration: 0.45, delay: index * 0.08 }}
+            whileHover={{ y: -4 }}
+            className="group glass-card flex h-full flex-col p-7 transition duration-300 hover:border-brand-primary/40"
           >
             <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 text-xl text-brand-primary">
               0{index + 1}
@@ -76,24 +75,15 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <div className="flex gap-3">
+            <div className="flex">
               <a
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="secondary-btn flex-1 gap-2 px-4 py-2.5"
+                className="secondary-btn w-full gap-2 px-4 py-2.5"
               >
                 <FaGithub size={16} />
                 GitHub
-              </a>
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noreferrer"
-                className="primary-btn flex-1 gap-2 px-4 py-2.5"
-              >
-                <HiArrowTopRightOnSquare size={16} />
-                Live Demo
               </a>
             </div>
           </motion.article>

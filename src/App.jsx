@@ -15,18 +15,38 @@ function LoadingScreen() {
   );
 }
 
+function ResumeViewer() {
+  return (
+    <div className="min-h-screen bg-brand-bg px-4 py-6 sm:px-8">
+      <div className="mx-auto flex w-full max-w-6xl justify-end">
+        <a href="/resume.pdf" download className="secondary-btn">
+          Download Resume
+        </a>
+      </div>
+      <div className="mx-auto mt-6 h-[calc(100vh-7rem)] max-w-6xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950 shadow-glow">
+        <iframe src="/resume.pdf" title="Madhura S N Resume" className="h-full w-full" />
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const isResumePage = window.location.pathname === '/resume';
+  const [isLoading, setIsLoading] = useState(!isResumePage);
 
   useEffect(() => {
+    if (isResumePage) {
+      return undefined;
+    }
+
     const timer = window.setTimeout(() => setIsLoading(false), 1400);
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [isResumePage]);
 
   return (
     <>
       {isLoading && <LoadingScreen />}
-      <Home />
+      {isResumePage ? <ResumeViewer /> : <Home />}
     </>
   );
 }

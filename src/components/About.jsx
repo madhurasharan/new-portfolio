@@ -36,9 +36,8 @@ export default function About() {
         </p>
         <h2 className="section-title">Turning ideas into solid engineering.</h2>
         <p className="section-subtitle">
-          I&apos;m Madhura S N, a Java backend developer focused on scalable application
-          design, clean code, and practical problem solving across backend and frontend
-          workflows.
+          I&apos;m Madhura S N, a software developer focused on clean implementation,
+          practical problem solving, and building thoughtful web experiences.
         </p>
       </motion.div>
 

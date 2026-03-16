@@ -11,8 +11,8 @@ html {
 body {
   @apply bg-brand-bg font-sans text-slate-100 antialiased;
   background-image:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 30%),
-    radial-gradient(circle at top right, rgba(34, 197, 94, 0.08), transparent 24%),
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.05), transparent 22%),
     linear-gradient(180deg, rgba(15, 23, 42, 1) 0%, rgba(9, 14, 28, 1) 100%);
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .section-shell {
-  @apply mx-auto max-w-7xl px-6 sm:px-10 lg:px-16;
+  @apply mx-auto max-w-6xl px-6 sm:px-8 lg:px-12;
 }
 
 .section-title {
@@ -48,11 +48,11 @@ body {
 }
 
 .section-subtitle {
-  @apply mb-12 max-w-2xl text-base leading-7 text-slate-400;
+  @apply mb-10 max-w-2xl text-base leading-7 text-slate-400;
 }
 
 .glass-card {
-  @apply rounded-3xl border border-brand-border bg-white/5 backdrop-blur-md;
+  @apply rounded-3xl border border-brand-border bg-white/[0.04] backdrop-blur-md;
 }
 
 .nav-link {
@@ -60,9 +60,9 @@ body {
 }
 
 .primary-btn {
-  @apply inline-flex items-center justify-center rounded-full border border-brand-primary bg-brand-primary px-6 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-sky-300;
+  @apply inline-flex items-center justify-center rounded-full border border-brand-primary bg-brand-primary px-6 py-3 text-sm font-semibold text-slate-950 transition duration-300 hover:bg-brand-accent hover:text-slate-950;
 }
 
 .secondary-btn {
-  @apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-brand-accent hover:text-brand-accent;
+  @apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-brand-accent hover:text-brand-accent;
 }
