@@ -1,0 +1,5 @@
+Madhura S N
+Java Backend Developer
+
+This is a placeholder resume file for the portfolio demo.
+Replace this file with your actual resume PDF and keep the same filename if you want the download button to work without changing code.
