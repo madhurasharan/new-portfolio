@@ -62,7 +62,7 @@ export default function Hero() {
                   View Projects
                 </a>
                 <a
-                  href="/resume"
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="secondary-btn px-7 py-3 text-base"
