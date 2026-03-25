@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaEnvelope, FaGithub, FaLaptopCode, FaLinkedin, FaMedium } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaMedium } from 'react-icons/fa';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { SiLeetcode } from 'react-icons/si';
 
@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
-      <nav className="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-8">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-8">
         <div className="hidden items-center gap-6 md:flex lg:gap-8">
           {navItems.map((item) => (
             <a key={item.href} href={item.href} className="nav-link">
@@ -34,14 +34,6 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-
-        <a
-          href="#home"
-          className="flex items-center gap-2 text-lg font-semibold transition duration-300 hover:text-sky-400 md:absolute md:left-1/2 md:-translate-x-1/2"
-        >
-          <FaLaptopCode className="text-xl text-sky-400" />
-          <span>Madhura S N</span>
-        </a>
 
         <div className="hidden items-center gap-4 md:flex">
           {socials.map(({ icon: Icon, href, label }) => (
