@@ -24,10 +24,10 @@ const projects = [
   {
     title: 'Early Autism Spectrum Disorder Detection',
     description:
-      'A machine learning-based web application for early ASD screening using clinical and behavioral data. Built with a stacking ensemble of XGBoost, Random Forest, and CatBoost, trained on 700+ samples with SMOTE for a 73:27 class imbalance, and validated on an external 1,054-sample dataset with 94% accuracy.',
+      'A machine learning-based web application for early ASD screening using clinical and behavioral data. Built with a stacking ensemble of XGBoost, Random Forest, and CatBoost.',
     stack: ['XGBoost', 'Random Forest', 'CatBoost', 'SMOTE', 'Machine Learning'],
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/madhurasharan/Autism-Spectrum-Disorder-Detection',
+    demo: 'https://autism-spectrum-disorder-screening-app.onrender.com',
   },
 ];
 
