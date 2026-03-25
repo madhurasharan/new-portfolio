@@ -22,13 +22,12 @@ const projects = [
     demo: '#',
   },
   {
-    title: 'Weather App',
+    title: 'Early Autism Spectrum Disorder Detection',
     description:
-      'A responsive React weather application using the OpenWeatherMap API with fast city search and a clean UI for real-time weather updates.',
-    stack: ['React', 'API Integration', 'CSS', 'JavaScript'],
-    github:
-      'https://github.com/madhurasharan/weather-app',
-    demo: 'https://weather-app-lemon-nine-78.vercel.app/',
+      'A machine learning-based web application for early ASD screening using clinical and behavioral data. Built with a stacking ensemble of XGBoost, Random Forest, and CatBoost, trained on 700+ samples with SMOTE for a 73:27 class imbalance, and validated on an external 1,054-sample dataset with 94% accuracy.',
+    stack: ['XGBoost', 'Random Forest', 'CatBoost', 'SMOTE', 'Machine Learning'],
+    github: '#',
+    demo: '#',
   },
 ];
 
@@ -82,7 +81,7 @@ export default function Projects() {
             <div className="mt-auto flex flex-wrap gap-3">
               <a
                 href={project.demo}
-                className="secondary-btn w-full px-4 py-2.5 sm:flex-1"
+                className="secondary-btn w-full px-4 py-2.5"
                 aria-disabled={project.demo === '#'}
                 onClick={(event) => {
                   if (project.demo === '#') {
@@ -96,7 +95,13 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="secondary-btn w-full px-4 py-2.5 sm:flex-1"
+                className="secondary-btn w-full px-4 py-2.5"
+                aria-disabled={project.github === '#'}
+                onClick={(event) => {
+                  if (project.github === '#') {
+                    event.preventDefault();
+                  }
+                }}
               >
                 <FaGithub size={16} />
                 GitHub
